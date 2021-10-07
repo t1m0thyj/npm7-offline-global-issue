@@ -1,0 +1,31 @@
+name: Install Test
+
+on:
+  push
+
+jobs:
+  test:
+    runs-on: ${{ matrix.os }}
+
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [windows-latest, ubuntu-latest, macos-latest]
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+
+    - name: Use Node.js 16
+      uses: actions/setup-node@v2
+      with:
+        node-version: '16'
+    
+    - name: Download TGZ
+      run: |
+        curl -o temp.zip https://zowe.jfrog.io/artifactory/libs-release-local/org/zowe/1.24.0/zowe-cli-package-1.24.0.zip
+        unzip temp.zip
+        tar ztf zowe-cli.tgz | sort
+
+    - name: Install TGZ
+      run: npm install -g zowe-cli.tgz
