@@ -16,14 +16,14 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v2
 
-    - name: Use Node.js 16
+    - name: Use Node.js LTS
       uses: actions/setup-node@v2
       with:
-        node-version: '16'
+        node-version: 'lts/*'
     
     - name: Download and Verify TGZ
       run: |
-        curl -o temp.zip https://zowe.jfrog.io/artifactory/libs-release-local/org/zowe/1.24.0/zowe-cli-package-1.24.0.zip
+        curl -o temp.zip https://zowe.jfrog.io/artifactory/libs-release-local/org/zowe/1.27.0/zowe-cli-package-1.27.0.zip
         unzip temp.zip
         tar ztf zowe-cli.tgz | sort
 
