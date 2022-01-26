@@ -21,11 +21,8 @@ jobs:
       with:
         node-version: 'lts/*'
     
-    - name: Download and Verify TGZ
-      run: |
-        curl -o temp.zip https://zowe.jfrog.io/artifactory/libs-release-local/org/zowe/1.27.0/zowe-cli-package-1.27.0.zip
-        unzip temp.zip
-        tar ztf zowe-cli.tgz | sort
+    - name: Setup Invalid Proxy
+      run: npm config set -g proxy INVALID_PROXY
 
     - name: Install TGZ Offline
-      run: npm install --global --offline zowe-cli.tgz
+      run: npm install -g npm-offline-test-1.0.0.tgz
