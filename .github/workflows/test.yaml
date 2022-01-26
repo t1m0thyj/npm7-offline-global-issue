@@ -21,7 +21,7 @@ jobs:
       with:
         node-version: 'lts/*'
     
-    - name: Setup Invalid Proxy
+    - name: Configure Invalid Proxy
       run: npm config set -g proxy http://proxy.invalid
 
     - name: Install TGZ Offline
