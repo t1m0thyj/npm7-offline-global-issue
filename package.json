@@ -16,11 +16,5 @@
   "bugs": {
     "url": "https://github.com/t1m0thyj/npm7-offline-global-issue/issues"
   },
-  "homepage": "https://github.com/t1m0thyj/npm7-offline-global-issue#readme",
-  "dependencies": {
-    "pacote": "^12.0.3"
-  },
-  "bundledDependencies": [
-    "pacote"
-  ]
+  "homepage": "https://github.com/t1m0thyj/npm7-offline-global-issue#readme"
 }
