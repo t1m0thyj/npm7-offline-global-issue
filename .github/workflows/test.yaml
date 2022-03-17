@@ -28,7 +28,7 @@ jobs:
     
     - name: Update NPM
       run: |
-        npm install -g npm@8.5.4
+        npm install -g npm@8.5.5
         npm cache clean --force
     
     - name: Configure Invalid Proxy
