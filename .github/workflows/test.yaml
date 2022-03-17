@@ -23,7 +23,7 @@ jobs:
     
     - name: Download TGZ
       run: |
-        curl -o temp.zip https://zowe.jfrog.io/artifactory/libs-release-local/org/zowe/1.24.0/zowe-cli-package-1.24.0.zip
+        curl -o temp.zip https://zowe.jfrog.io/artifactory/libs-release-local/org/zowe/1.27.2/zowe-cli-package-1.27.2.zip
         unzip temp.zip
     
     - name: Update NPM
