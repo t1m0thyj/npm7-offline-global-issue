@@ -27,7 +27,9 @@ jobs:
         unzip temp.zip
     
     - name: Update NPM
-      run: npm install -g npm@8.5.5
+      run: |
+        npm install -g npm@8.5.4
+        npm cache clean --force
     
     - name: Configure Invalid Proxy
       run: npm config set -g proxy http://proxy.invalid
