@@ -23,13 +23,13 @@ jobs:
     
     - name: Download TGZ
       run: |
-        curl -o temp.zip https://zowe.jfrog.io/artifactory/libs-release-local/org/zowe/1.27.2/zowe-cli-package-1.27.2.zip
+        curl -o temp.zip https://zowe.jfrog.io/artifactory/libs-release-local/org/zowe/cli/zowe-cli-package/2.1.0/zowe-cli-package-2.1.0-RC1.zip
         unzip temp.zip
     
-    - name: Update NPM
-      run: |
-        npm install -g npm@8.5.5
-        npm cache clean --force
+    # - name: Update NPM
+    #   run: |
+    #     npm install -g npm@8.11.0
+    #     npm cache clean --force
     
     - name: Configure Invalid Proxy
       run: npm config set -g proxy http://proxy.invalid
